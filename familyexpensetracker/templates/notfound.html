@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Found</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Lato:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" >FamilyExpenseTracker</a>
+
+            <div class="button-navbar">
+                <a href="/" class="logout"> Home</a>
+                <a href="/login">Login</a>
+                <a href="/dashboard">Dashboard</a>
+                </div>
+        </div>
+    </nav>
+    <h1 style="max-width: none;">{{error}}</h1>
+
+</body>
+</html>

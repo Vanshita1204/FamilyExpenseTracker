@@ -1,0 +1,104 @@
+
+.navbar{
+    background-color: grey;
+    padding: 25px;
+    padding-left:0px ;
+    margin-top: 0;
+}
+ a{
+    padding: 20px;
+    font-size: 25px;
+    color:black;
+    text-decoration: none;
+}
+.navbar-brand{
+    padding-left:20px;
+    border-right: 2px solid rgba(54, 43, 43, 0.509);
+
+}
+body{
+    padding:0;
+    margin:0;
+}
+a:hover{
+    background-color: black;
+    color:white;
+}
+.pages{
+    padding-left:35px;
+    padding-right:35px;
+}
+.button-navbar {
+    float: right;
+  }
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+    p{
+        text-align: center;
+        font-size: 18px ;
+    }
+body{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* {box-sizing: border-box}
+input[type=text], input[type=password] {
+   font-size: 20px;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   border: none;
+   background: #f1f1f1;
+   text-align: center;
+}
+label{
+   font-size: 20px;
+}
+input[type=text]:focus, input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
+}
+hr {
+   border: 1px solid #f1f1f1;
+   margin-bottom: 25px;
+}
+button {
+   font-size: 20px;
+   font-weight: bold;
+   background-color: rgb(10, 119, 13);
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   opacity: 0.9;
+}
+button:hover {
+   opacity:1;
+}
+
+.formContainer {
+   padding: 16px;
+}
+.tc{
+    font-size: 20px;
+    background-color: none;
+    padding: 0px;
+    margin: 0px;
+}
+.tc:hover{
+    background-color: white;
+}
+.tcp{
+    text-align: left;
+}
+.login{
+    font-size: 20px;
+   font-weight: bold;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   opacity: 0.9;
+}

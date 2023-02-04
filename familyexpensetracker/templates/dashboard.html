@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+    <link rel="stylesheet" href="../static/css/home.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Lato:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" >FamilyExpenseTracker</a>
+            <a class="h4" href="/member/add">Add member</a> 
+
+            <div class="button-navbar">
+                <a href="/logout" class="logout"> Logout</a>
+                </div>
+        </div>
+    </nav>
+    <h1 style="text-align:center; padding:0px; margin:0px; max-width: none;">Welcome {{user.name}}</h1>
+    <hr>
+    <div class="row_main ">
+        <div class="col-10 offset-1" style="align-self: center;">
+    <table class='table table-bordered member_table'>
+    <thead>
+        <tr><th>S.No.</th> <th>Member Name</th> <th>Member Age</th> <th>Member Type</th><th>Total Expense</th>  <th>Limit</th><th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+  {% for t in user.members %}
+  <tr>
+    <td>{{loop.index}}</td>
+    <td><a href="/member/{{t.id}}">{{t.name}}</a></td>
+    <td>{{t.age}}</td>
+    <td>Integer</td>
+    <td> {{t.total_expense}}
+    </td>
+    <td>{{t.limit}}</td>
+    <td>
+      <a href="/member/{{t.id}}/edit">Edit</a>
+      <a href="/member/{{t.id}}/delete">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Member</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}" />
+    <link rel="stylesheet" href="../static/css/signup.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Lato:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" >FamilyExpenseTracker</a>
+            <a href="/dashboard"> Dashboard</a>
+            <div class="button-navbar">
+                <a href="/logout" class="logout"> Logout</a>
+                </div>
+        </div>
+    </nav>
+    <form method="POST">
+        <div class="formContainer">
+            <h1>Edit Expense</h1>
+            <hr>
+            <label for="col-sm-2 col-form-label col-form-label-sm value">Timestamp:</label>
+            <div class="col-sm-4">
+            <input class="datetime" type="text" name="time" value="{{ datetime.now().strftime('%d/%b/%Y, %H:%M:%S.%f') }}">
+            </div>
+            
+            <div><label for="category"><b>Category:</b></label>
+                <input type="text" placeholder="Enter Category" name="category" required>
+            </div>
+            
+            <div><label for="amt"><b>Amount:</b></label>
+                <input type="text" placeholder="Enter Amount" name="amt" required>
+            </div>
+            <div style="padding: 20px;">
+                <button type="submit" class="signup" >Edit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

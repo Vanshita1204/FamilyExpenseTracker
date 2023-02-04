@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Expense</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}" />
+    <link rel="stylesheet" href="../static/css/signup.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Lato:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" >FamilyExpenseTracker</a>
+            <a href="/dashboard"> Dashboard</a>
+
+            <div class="button-navbar">
+                <a href="/logout" class="logout"> Logout</a>
+                </div>
+        </div>
+    </nav>
+    <form method="POST">
+        <div class="formContainer">
+            <h1>Edit Tracker</h1>
+            <hr>
+            <div><label for="mem_name"><b>Name:</b></label>
+                <input type="text" placeholder="Enter Member Name" name="mem_name" required>
+            </div>
+            
+            <div><label for="mem_age"><b>Age:</b></label>
+                <input type="text" placeholder="Enter Member Age" name="mem_age" required>
+            </div>
+            <div><label for="mem_limit"><b>Limit:</b></label>
+                <input type="text" placeholder="Enter Expense Limit" name="mem_limit" required>
+            </div>
+            <div><label for="type"><b>Expense Type:</b> </label>
+                <select style="font-size:20px ; " name="numeric" id="num"> 
+                    <option value="" disabled selected>Select</option>
+                    <option style="font-size:20px ;" value="Numeric">Numeric</option>
+
+                </select>
+            </div>
+            <div style="padding: 20px;">
+                <button type="submit" class="signup" >Edit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

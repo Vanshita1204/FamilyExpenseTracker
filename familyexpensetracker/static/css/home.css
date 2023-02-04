@@ -1,0 +1,158 @@
+a{
+    padding: 20px;
+    font-size: 25px;
+    color:black;
+    text-decoration: none;
+}
+.navbar{
+    background-color: grey;
+    padding: 25px;
+    padding-left:0px ;
+    margin-top: 0;
+}
+.navbar-brand{
+    padding-left:20px;
+    border-right: 2px solid rgba(54, 43, 43, 0.509);
+
+}
+body{
+    padding:0;
+    margin:0;
+}
+a:hover{
+    background-color: black;
+    color:white;
+}
+.pages{
+    padding-left:35px;
+    padding-right:35px;
+}
+.button-navbar {
+    float: right;
+  }
+h1{
+    font-size: 170px;
+    max-width: 1300px;
+    padding-left: 30px;
+    color:rgba(26, 140, 136, 0.622);
+    margin-top: 0px;
+    margin-bottom:30px;
+    font-family: 'Lato', sans-serif;
+}
+.homepage{
+    margin-top: 0px;
+    background-image: url("../../static/images/Budget-The-Dispatch-.jpg"); /* The image used */
+    background-color: #000000; /* Used if the image is unavailable */
+    background-size: cover;
+    background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#signup{
+    margin: black solid 1px;
+    padding: 20px;
+    font-size: 35px;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    background-color: grey;
+}
+#signup:hover{
+    background-color: black;
+    color: white
+}
+.signupbutton{
+    padding:20px;
+    padding-left: 150px;
+    padding-bottom: 170px; ;
+}
+h2{
+    font-size: 100px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color:rgba(26, 140, 136, 0.622);
+
+}
+#about > .flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+  }
+  
+ #about > .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 20px;
+    padding: 30px;
+    font-size: 45px;
+    height: 400px;
+    width:400px;
+    text-align: center;
+    align-items: center;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    border-radius: 50px;
+  }
+  #contact > .flex-container{
+ 
+        display: flex;
+        justify-content: center;
+      
+  }
+  #contact > .flex-container > div{
+    background-color: grey;
+    margin: 45px;
+    padding: 30px;
+    font-size: 30px;
+    height: 200px;
+    width:400px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 75px;
+  }
+
+  .phonenum > p{
+    padding:0px;
+    margin: 0px;
+  }
+  .phonenum >  .first{
+    margin-bottom:20px;
+    padding-bottom: 20px;
+  }
+  .address{
+    margin-bottom:40px;
+
+  }
+  table{
+    font-size: 25px;
+  }
+  td{
+    border: 1px solid black;
+    padding: 20PX;
+  }
+  th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 20PX;
+    
+  }
+.row-main{
+  padding-left: 350px;
+}
+.row_main{
+  padding-left: 200px;
+}
+.row{
+  font-size: 25px;
+}
+select{
+  font-size: 25px;
+}
+
+input{
+  font-size: 25px;
+}
+button{
+  font-size: 25px;
+
+}

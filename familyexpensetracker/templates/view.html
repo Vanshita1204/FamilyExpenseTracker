@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Lato:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" >FamilyExpenseTracker</a>
+            <a class="h4" href="/dashboard">Dashboard</a> 
+            <a class="h4" href="/{{member.id}}/expense/add">Add Expense</a> 
+
+            <div class="button-navbar">
+                <a href="/logout" class="logout"> Logout</a>
+                </div>
+        </div>
+    </nav>
+    <h1 style="text-align:center; padding:0px; margin:0px; max-width: none;">Welcome {{member.name}}</h1>
+    <hr>
+    <div class="row-main ">
+        <div class="col-10 offset-1" style="align-self: center;">
+    <table class='table table-bordered expense_table'>
+    <thead>
+        <tr> <th>TimeStamp</th><th>S.No.</th> <th>Category</th> <th>Amount</th><th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+  {% for t in member.expenses %}
+  <tr>
+    <td>{{t.created_date}}</td>
+    <td>{{loop.index}}</td>
+    <td>{{t.category}}</td>
+    <td>{{t.amount}}</td>
+    <td>
+      <a href="/expense/{{t.id}}/editex">Edit</a>
+      <a href="/expense/{{t.id}}/delete">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+<hr>
+<div class="row">
+  <h2><u>Trendline:</u></h2>
+  <div class="col-sm-8 col-xl-7 d-flex justify-content-center">
+  <img class="img-fluid" src="{{chart}}" alt="No data for specified duration"></div>
+  <div class="col-sm-4 col-xl-4 d-flex align-self-center">
+    <form class="form" action="/member/{{member.id}}" method="POST">
+      <select class="time" name="period">
+        <option value="Today">Today</option>
+        <option value="1Month">This Month</option>
+        <option value="All">All time</option>
+        <option value="Custom">
+          Custom range:
+          <label for='customdatetimel'> Enter Start</label>
+      <label for='customdatetimeh'>and End Datetime:-</label><br>
+      <input name='customdatetimel' type="datetime-local"><input name='customdatetimeh' type='datetime-local'>
+        </option>
+      </select>
+      
+      <button type="submit" name="button">GO</button><br><br>
+      
+    </form>
+  </div>
+</body>
+</html>
